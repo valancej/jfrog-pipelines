@@ -6,10 +6,3 @@ resources:
         path: valancej/jfrog-pipelines       # replace with your repository name
         branches:
           include: master
-   
-    - name: build_info_docker_build_push
-      type: BuildInfo
-      configuration:
-        sourceArtifactory: image_demo
-        buildName: svc_build
-        buildNumber: 1
