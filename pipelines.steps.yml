@@ -12,7 +12,7 @@ pipelines:
           inputResources:
             - name: repo_docker_build_push
           integrations:
-            - name: demoArt
+            - name: image_demo
 
       - name: docker_push
         type: DockerPush
@@ -20,7 +20,7 @@ pipelines:
           affinityGroup: docker_afgroup             # Execute build and push on the same node
           targetRepository: docker-local
           integrations:
-            - name: demoArt
+            - name: image_demo
           inputSteps:
             - name: docker_build
 

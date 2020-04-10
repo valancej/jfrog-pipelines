@@ -1,0 +1,15 @@
+resources:
+    - name: repo_docker_build_push
+      type: GitRepo
+      configuration:
+        gitProvider: jvalance_github                                     # replace with your integration
+        path: jfrogpipelines       # replace with your repository name
+        branches:
+          include: master
+   
+    - name: build_info_docker_build_push
+      type: BuildInfo
+      configuration:
+        sourceArtifactory: image_demo
+        buildName: svc_build
+        buildNumber: 1
