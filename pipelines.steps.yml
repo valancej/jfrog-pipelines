@@ -11,3 +11,15 @@ pipelines:
           dockerImageTag: 7.7
           inputResources:
             - name: repo_docker_build_push
+          integrations:
+            - name: image_demo
+      
+      - name: docker_push
+        type: DockerPush
+        configuration:
+          affinityGroup: docker_afgroup             # Execute build and push on the same node
+          targetRepository: anchore-docker
+          integrations:
+            - name: image_demo
+          inputSteps:
+            - name: docker_build
