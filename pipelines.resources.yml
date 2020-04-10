@@ -3,7 +3,7 @@ resources:
       type: GitRepo
       configuration:
         gitProvider: jvalance_github                                     # replace with your integration
-        path: jfrogpipelines       # replace with your repository name
+        path: valancej/jfrog-pipelines       # replace with your repository name
         branches:
           include: master
    
